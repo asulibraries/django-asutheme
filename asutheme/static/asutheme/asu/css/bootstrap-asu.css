@@ -1827,6 +1827,11 @@ input[type="button"].btn-block {
     padding-right: 10px;
   }
 }
+@media (max-width: 1199px) {
+  .navbar-ws .navbar-nav > li > a {
+    padding-left: 25px;
+  }
+}
 .navbar-ws .navbar-nav > li > a:hover, .navbar-ws .navbar-nav > li > a:focus {
   background-color: black;
   color: #ffb310;
@@ -3145,6 +3150,24 @@ tbody.collapse.in {
 .carousel * {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
+}
+
+.related-articles {
+  background-color: #fafafa;
+  border-top: 1px solid #1f1f1f;
+  margin-top: 12px;
+  padding-bottom: 24px;
+  padding-top: 0;
+}
+.related-articles li {
+  margin-right: 12px;
+}
+.related-articles li a {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px 12px;
 }
 
 /*!
