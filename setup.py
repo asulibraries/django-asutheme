@@ -6,7 +6,7 @@ with open('README.rst', 'r', 'utf-8') as f:
 
 setup(
     name='django-asutheme',
-    version='0.1',
+    version='0.2',
     description='Base templates for Django that adhere to ASU Web Standards.',
     long_description=readme,
     author='Matt Cordial',
@@ -14,7 +14,6 @@ setup(
     url='https://github.com/asulibraries/django-asutheme',
     license='Apache 2.0',
     packages=['asutheme'],
-    zip_safe=False,
     include_package_data=True,
     keywords=['Arizona State University'],
     classifiers=[
