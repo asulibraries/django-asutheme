@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {% block extrahead %}{% endblock %}
-
   <title>{% block title %}{% endblock %}{% block extratitle %}{% endblock %}</title>
 
-  <!-- CSS -->
+  <!-- Style -->
   <link href='//fonts.googleapis.com/css?family=Roboto:900,400,300,700,500' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" type="text/css" href="{% static 'asutheme/bootstrap/css/bootstrap.min.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'asutheme/asu/css/bootstrap-asu.min.css' %}" />
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
   {% block extrastyle %}{% endblock %}
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,6 +38,7 @@
   <style type="text/css">
     #asu_hdr a { border-bottom: 0; }
   </style>
+  {% block extrahead %}{% endblock %}
 </head>
 
 <body{% block body_attrs %}{% endblock %}>
