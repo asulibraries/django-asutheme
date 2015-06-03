@@ -6,7 +6,7 @@ with open('README.rst', 'r', 'utf-8') as f:
 
 setup(
     name='django-asutheme',
-    version='0.2.1',
+    version='0.2.2',
     description='Base templates for Django that adhere to ASU Web Standards.',
     long_description=readme,
     author='Matt Cordial',
