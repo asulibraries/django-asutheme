@@ -24,6 +24,10 @@ Add ``'asutheme'`` to your ``INSTALLED_APPS``::
         'asutheme',
     )
 
+Add ``'asutheme.context_processors.container_style'`` to your list of context processors.
+By default the containers are fixed, if you would like them to be fluid add to your settings file.
+``ASU_THEME_FLUID = True`` to your settings file.
+
 You can now extend the base template and add to/override defined blocks::
 
     {% extend asutheme/base.html %}

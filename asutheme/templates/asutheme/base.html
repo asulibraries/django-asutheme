@@ -43,8 +43,9 @@
 
 <body{% block body_attrs %}{% endblock %}>
 
+  {% block asu_main_header %}
   <header id="asu_header">
-    <div class="container">
+    <div class="{{ asutheme_container_class }}">
       <!-- START /asuthemes/4.3/headers/default.shtml -->
       <div id="main-search" class="main-search closed"></div>
       <div id="asu_hdr" class="asu_hdr_white">
@@ -155,10 +156,11 @@
       <!-- END /asuthemes/4.3/headers/default.shtml -->
     </div>
   </header>
+  {% endblock asu_main_header %}
 
   {% block site_name %}
   <div id="site-name-desktop" class="section site-name-desktop">
-    <div class="container">
+    <div class="{{ asutheme_container_class }}">
       <h1 class="site-title" id="asu_school_name">
         <span class="first-word">
           {% block asu_site_title_main %}{% endblock %}
@@ -171,7 +173,7 @@
 
   {% block navbar %}
   <nav class="navbar navbar-ws" role="navigation">
-    <div class="container">
+    <div class="{{ asutheme_container_class }}">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ws-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -208,7 +210,7 @@
 
     {% block super_footer %}
     <div class="big-foot">
-      <div class="container">
+      <div class="{{ asutheme_container_class }}">
         <div class="row">
           {% block super_footer_brand_col %}
           <div class="col-md-4 col-sm-12 space-bot-md">
@@ -223,7 +225,7 @@
 
     {% block global_footer %}
     <div class="little-foot">
-      <div class="container">
+      <div class="{{ asutheme_container_class }}">
         <div class="row">
           <div class="col-md-12">
             <ul class="little-foot-nav">
