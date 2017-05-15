@@ -30,7 +30,7 @@ By default the containers are fixed, if you would like them to be fluid add to y
 
 You can now extend the base template and add to/override defined blocks::
 
-    {% extend asutheme/base.html %}
+    {% extends 'asutheme/base.html' %}
 
     {% block asu_site_title_main %}
         <a href="https://lib.asu.edu" title="Arizona State University - Libraries">ASU Libraries</a>
