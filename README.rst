@@ -46,3 +46,66 @@ You can now extend the base template and add to/override defined blocks::
             ...
         </address>
     {% endblock %}
+
+Blocks and Layout Order
+-----------------------
+
+The base template defines the followig blocks, listed in the order that
+the renderer applies them. Most blocks are empty unless otherwise noted.
+Child blocks names appear indented under their parent. Be careful when
+overriding parent blocks, as this effectively wipes out any customized
+content in child blocks.
+
+-  ``html_attrs``: interpolated inside the ``HTML`` opening tag.
+-  ``title:`` appears under the ``TITLE`` element.
+-  ``extratitle``: appears under the ``TITLE`` element.
+-  ``extrastyle``: appears under the ``HTML>HEAD`` element.
+-  ``extrahead``: appears under the ``HTML>HEAD`` element.
+-  ``body_attrs``: interpolated under the ``BODY`` opening tag
+-  ``asu_main_header``: appears under ``HTML>HEAD``, after the standard
+   ASU header section
+
+   -  ``asu_login_link``: (non-empty) ASU login/logout link inside the
+      subhead navbar.
+
+-  ``site_name``: Section that identifies the name your site/web
+   application. Not to be confused with a page title.
+
+   -  ``asu_site_title_main``
+   -  ``asu_site_title_extra``
+
+-  ``navbar``: The main navbar section. See Bootstrap v3 docs for more
+   info: https://getbootstrap.com/components/#navbar
+
+   -  ``navbar_brand_link_text``: brand text
+   -  ``navbar_content``: appears under a navbar UL element. Customize
+      by adding LI elements.
+
+-  ``main_content``: The page-specific body of the page. Appears under
+   ``DIV#content.site-content`` element.
+-  ``footer``: top-level container for the “super footer” (for
+   site-specific content) and the “global footer” (ASU standard content
+   that appears on the bottom of every page).
+
+   -  ``super_footer``:
+
+      -  ``super_footer_brand_col``: Leftmost column of the super footer
+         row. Column width is ``.col-md-4.col-sm-12``.
+
+         -  ``super_footer_brand``: brand text to appear in the
+            left-most column of the site-specific footer.
+
+      -  ``super_footer_content``: blank block that appears ender the
+         super-footer after the brand column. *Note:* since this block
+         appears in a ``.row`` you will want to put any custom content
+         in a bootstrap “column”, e.g.
+         ``<div class=".col-md-8">my footer content</div>``
+
+-  ``global_footer``: (non-empty): the ASU Standard footer. You probably
+   don’t want to override this.
+-  ``extrajs``: section for adding ``SCRIPT`` includes.
+-  ``google_analytics``: (non-empty) google analytics init script.
+   Override with empty block to remove analytics gathering.
+
+   -  ``google_analytics_tracking_id``: override w/ your google
+      analytics API key
